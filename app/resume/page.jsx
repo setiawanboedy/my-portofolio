@@ -1,15 +1,17 @@
 "use client";
 
 import {
+  FaAndroid,
   FaCss3,
   FaFigma,
   FaHtml5,
+  FaJava,
   FaJs,
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
 
-import { SiNextdotjs, SiTailwindcss, SiTailwindCss } from "react-icons/si";
+import { SiFlutter, SiGoland, SiKotlin, SiLaravel, SiNextdotjs, SiTailwindcss, SiTailwindCss } from "react-icons/si";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -56,10 +58,9 @@ const about = {
 };
 
 const experience = {
-  icon: "",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum vel tenetur molestiae deleniti maxime nam fuga voluptatem maiores, beatae pariatur ipsa aspernatur suscipit. Cumque delectus sit nisi illo doloribus optio.",
+    "I heve many experience mobile and web development and willing to learn new thing.",
   items: [
     {
       company: "Itec",
@@ -67,33 +68,52 @@ const experience = {
       duration: "Aug 2024 - Present",
     },
     {
-      company: "Masjid Jalan Cahaya",
-      position: "Fullstack Web Devloper",
-      duration: "Nov 2023 - Jul 2024",
-    },
-    {
-      company: "Lumbung Inovasi",
-      position: "Freelance",
-      duration: "dfddfdsf",
+      company: "Cv. Lumbung Inovasi",
+      position: "Freelance Mobile Developer",
+      duration: "Feb 2024 - Present",
     },
     {
       company: "Masjid Jalan Cahaya",
-      position: "Fullstack Web Devloper",
+      position: "Freelance Fullstack Web Devloper",
       duration: "Nov 2023 - Jul 2024",
+    },
+    {
+      company: "PT. Nawab Indonesia",
+      position: "Freelance Fullstack Devloper",
+      duration: "Des 2023 - Jul 2024",
+    },
+    {
+      company: "Bangkit Academy 2023 Batch 2",
+      position: "Mentor Android Devloper",
+      duration: "Aug 2023 - Feb 2024",
+    },
+    {
+      company: "Bangkit Academy 2023 Batch 1",
+      position: "Advisor of Capstone Android Developer",
+      duration: "May 2023 - July 2023",
+    },
+    {
+      company: "Kaki Keenam Startup Capstone",
+      position: "Android Developer Devloper",
+      duration: "Jan 2022 - Feb 2023",
     },
   ],
 };
 
 const education = {
-  icon: "",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum vel tenetur molestiae deleniti maxime nam fuga voluptatem maiores, beatae pariatur ipsa aspernatur suscipit. Cumque delectus sit nisi illo doloribus optio.",
+    "Physics can train my logic and implemented in programming.",
   items: [
     {
-      institution: "Itec",
-      degree: "Mobile Developer Trainer",
-      duration: "Aug 2024 - Present",
+      institution: "Bangkit Academy 2021 x Google",
+      degree: "Mobile Developer",
+      duration: "Jan 2021 - Aug 2021",
+    },
+    {
+      institution: "Mataram University",
+      degree: "Bachelor of Physics",
+      duration: "Aug 2023",
     },
   ],
 };
@@ -101,8 +121,32 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum vel tenetur molestiae deleniti maxime nam fuga voluptatem maiores, beatae pariatur ipsa aspernatur suscipit. Cumque delectus sit nisi illo doloribus optio.",
+    "Skill that i can handle.",
   items: [
+    {
+      icon: <SiKotlin />,
+      name: "kotlin",
+    },
+    {
+      icon: <FaJava />,
+      name: "java",
+    },
+    {
+      icon: <SiFlutter />,
+      name: "flutter",
+    },
+    {
+      icon: <FaAndroid />,
+      name: "android",
+    },
+    {
+      icon: <SiGoland />,
+      name: "Golang",
+    },
+    {
+      icon: <SiLaravel />,
+      name: "Laravel",
+    },
     {
       icon: <FaJs />,
       name: "javascript",
