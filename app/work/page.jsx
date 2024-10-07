@@ -20,12 +20,171 @@ import WorkSlideBtns from "@/components/WorkSlideBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "NoteKu",
     title: "project 1",
     description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. In ipsa reiciendis sit? Dolorum tempore sed mollitia consequuntur reprehenderit saepe, possimus alias cumque dolores tempora velit? Atque nobis voluptas nostrum saepe?",
-    stack: [{ name: "Html 5" }],
-    image: "https://setiawanboedy.github.io/public/images/kakikeenam.png",
+      "The Journal Note app and NoteKu, are modern Android applications designed for managing daily journal entries. It leverages a range of advanced Android technologies and frameworks to provide a seamless and efficient user experience. The app incorporates a declarative UI approach using Jetpack Compose, ensuring a clean and intuitive interface. As the Android Developer, I was responsible for the full development cycle of the Journal Note app, from planning and architecture to implementation and deployment.",
+    stack: [
+      { 
+        name: "Kotlin" 
+      },
+      { 
+        name: "Dagger Hilt" 
+      },
+      { 
+        name: "Room" 
+      },
+      { 
+        name: "MongoDB" 
+      },
+      { 
+        name: "Firebase" 
+      },
+      { 
+        name: "Jetpack Compose" 
+      },
+      { 
+        name: "MVVM Architecture" 
+      },
+      { 
+        name: "Material 3" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/noteku.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "02",
+    category: "Masjid Digital",
+    title: "project 2",
+    description:
+      "The digital mosque website is an online platform that provides easy access for Muslims to obtain various types of Islamic content digitally. This platform allows users to watch videos of lectures, sermons, or religious lessons interactively and flexibly, anytime and anywhere.",
+    stack: [
+      { 
+        name: "PHP" 
+      },
+      { 
+        name: "Laravel" 
+      },
+      { 
+        name: "Tailwild" 
+      },
+      { 
+        name: "Youtube API" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/masjiddigital.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "03",
+    category: "Kaki Keenam",
+    title: "project 3",
+    description:
+      "The Kaki Keenam app offers several features, including a user-friendly interface with smooth navigation and easy access to key product information. The app also displays the locations of vendors within a 20-meter radius of the user's location, facilitating interactions between users and nearby mobile vendors. Additionally, the app includes transaction capabilities, allowing users to make purchases and track their transaction history. The search feature enables users to easily find desired products.",
+    stack: [
+      { 
+        name: "Flutter" 
+      },
+      { 
+        name: "Dart" 
+      },
+      { 
+        name: "FCM" 
+      },
+      { 
+        name: "GMap SDK" 
+      },
+      { 
+        name: "Firebase" 
+      },
+      { 
+        name: "Getx" 
+      },
+      { 
+        name: "MVVM Architecture" 
+      },
+      { 
+        name: "Material 3" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/kakikeenam1.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "Squid Hunter",
+    title: "project 4",
+    description:
+      "The IT community is a platform that provides support, learning, and opportunities in the information technology industry. Joining an IT community can be a good step to continuously develop a career in the IT field. Typically, within the community, we will be challenged to create an out-of-the-box product to sharpen our programming skills. In West Nusa Tenggara, specifically on the island of Lombok, there are many tourist destinations that contribute significantly to the region's income. Considering this, to participate in a challenge organized by my community, I have an idea to create an application that can enhance tourism interest in Lombok Island. The name of the application is Squid Hunter.",
+    stack: [
+      { 
+        name: "Flutter" 
+      },
+      { 
+        name: "Dart" 
+      },
+      { 
+        name: "FCM" 
+      },
+      { 
+        name: "Gmap SDK" 
+      },
+      { 
+        name: "Firebase" 
+      },
+      { 
+        name: "Getx" 
+      },
+      { 
+        name: "MVVM Architecture" 
+      },
+      { 
+        name: "Material 3" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/squidhunter.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "05",
+    category: "Hadir App",
+    title: "project 5",
+    description:
+      "Hadir app is a mobile attendance solution designed to simplify employee attendance management in a company. This app offers interactive and userfriendly features for recording attendance, applying for leave, and viewing attendance summaries.",
+    stack: [
+      { 
+        name: "Flutter" 
+      },
+      { 
+        name: "Dart" 
+      },
+      { 
+        name: "FCM" 
+      },
+      { 
+        name: "Gmap SDK" 
+      },
+      { 
+        name: "Riverpod" 
+      },
+      { 
+        name: "Rest Api" 
+      },
+      { 
+        name: "Material 3" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/hadir1.png",
     live: "",
     github: "",
   },
@@ -59,7 +218,7 @@ const Work = () => {
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
