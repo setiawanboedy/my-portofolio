@@ -19,13 +19,15 @@ export default function Home() {
 
             {/* btn social */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button className="uppercase flex items-center gap-2"
+              <a href="../public/assets/CV_BUDI_SETIAWAN.pdf">
+              <Button className="uppercase flex items-center gap-2 hover:bg-accent"
                 variant="outline"
                 size="lg"
               >
-                <span>Download CV</span>
+                <span >Download CV</span>
                 <FiDownload className="text-xl"/>
               </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                   <Social 
                   containerStyles="flex gap-6" 

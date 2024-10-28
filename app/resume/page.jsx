@@ -20,7 +20,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 const about = {
   title: "About me",
   description:
-    "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus molestias, amet numquam necessitatibus sapiente iusto quaerat itaque aspernatur odio asperiores tenetur reprehenderit autem porro iste aliquid in quasi, facilis at?",
+    "Enthusiastic and driven software developer with 2-3 years of experience in Mobile and Backend Development. Proficient in Kotlin, Dart, Golang, and TypeScript, with a strong focus on delivering high-quality, secure, and user-centric applications. Seeking to leverage my skills and experience to excel in software development roles.",
   info: [
     {
       filedName: "Name",
@@ -67,20 +67,20 @@ const experience = {
       position: "Mobile Developer Trainer",
       duration: "Aug 2024 - Present",
     },
-    {
-      company: "Cv. Lumbung Inovasi",
-      position: "Freelance Mobile Developer",
-      duration: "Feb 2024 - Present",
-    },
+    // {
+    //   company: "Cv. Lumbung Inovasi",
+    //   position: "Freelance Mobile Developer",
+    //   duration: "Feb 2024 - Present",
+    // },
     {
       company: "Masjid Jalan Cahaya",
       position: "Freelance Fullstack Web Devloper",
-      duration: "Nov 2023 - Jul 2024",
+      duration: "Nov 2023 - Aug 2024",
     },
     {
       company: "PT. Nawab Indonesia",
       position: "Freelance Fullstack Devloper",
-      duration: "Des 2023 - Jul 2024",
+      duration: "Jan 2024 - Mei 2024",
     },
     {
       company: "Bangkit Academy 2023 Batch 2",
@@ -217,7 +217,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[650px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
                       return (
