@@ -52,8 +52,8 @@ const projects = [
 
     ],
     image: "https://setiawanboedy.github.io/public/images/noteku.png",
-    live: "",
-    github: "",
+    live: "https://play.google.com/store/apps/details?id=com.tafakkur.noteapp",
+    github: "https://github.com/setiawanboedy/journal-note",
   },
   {
     num: "02",
@@ -115,7 +115,7 @@ const projects = [
     ],
     image: "https://setiawanboedy.github.io/public/images/kakikeenam1.png",
     live: "",
-    github: "",
+    github: "https://github.com/Kaki-Keenam/aplikasi-pembeli",
   },
   {
     num: "04",
@@ -186,6 +186,87 @@ const projects = [
     ],
     image: "https://setiawanboedy.github.io/public/images/hadir1.png",
     live: "",
+    github: "",
+  },
+  {
+    num: "06",
+    category: "Heart Uno",
+    title: "project 6",
+    description:
+      "Heart Rate Analysis is an application designed to examine the heart signal's condition and analyze it to provide desired heart-related information.",
+    stack: [
+      { 
+        name: "Flutter" 
+      },
+      { 
+        name: "Dart" 
+      },
+      { 
+        name: "Port Connector" 
+      },
+      { 
+        name: "Material 3" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/heart.png",
+    live: "",
+    github: "https://github.com/setiawanboedy/heart-uno",
+  },
+  {
+    num: "07",
+    category: "Money Management",
+    title: "project 7",
+    description:
+      "Momen is an application for managing day-to-day finances.",
+    stack: [
+      { 
+        name: "Flutter" 
+      },
+      { 
+        name: "Dart" 
+      },
+      { 
+        name: "Rest Api" 
+      },
+      { 
+        name: "Material 3" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/momen.png",
+    live: "",
+    github: "https://github.com/setiawanboedy/momen-frontend",
+  },
+  {
+    num: "08",
+    category: "Fishku",
+    title: "project 7",
+    description:
+      "ishku is an application that I developed as a freelance project. This application has a main feature, which is the option to buy and sell fish, and the ability to scan fish to determine their freshness.",
+    stack: [
+      { 
+        name: "Flutter" 
+      },
+      { 
+        name: "Dart" 
+      },
+      { 
+        name: "Rest Api" 
+      },
+      { 
+        name: "FCM" 
+      },
+      { 
+        name: "Firebase" 
+      },
+      { 
+        name: "Material 3" 
+      },
+
+    ],
+    image: "https://setiawanboedy.github.io/public/images/fishku.PNG",
+    live: "https://play.google.com/store/apps/details?id=id.fishku.consumer",
     github: "",
   },
 ];
