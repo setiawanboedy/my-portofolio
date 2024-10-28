@@ -19,7 +19,7 @@ export default function Home() {
 
             {/* btn social */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="../public/assets/CV_BUDI_SETIAWAN.pdf">
+              <a href="https://setiawanboedy.github.io/public/file/CV_BUDI_SETIAWAN-v.pdf">
               <Button className="uppercase flex items-center gap-2 hover:bg-accent"
                 variant="outline"
                 size="lg"
