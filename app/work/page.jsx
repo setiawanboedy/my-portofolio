@@ -241,7 +241,7 @@ const projects = [
   {
     num: "08",
     category: "Fishku",
-    title: "project 7",
+    title: "project 8",
     description:
       "ishku is an application that I developed as a freelance project. This application has a main feature, which is the option to buy and sell fish, and the ability to scan fish to determine their freshness.",
     stack: [
@@ -269,14 +269,72 @@ const projects = [
     live: "https://play.google.com/store/apps/details?id=id.fishku.consumer",
     github: "",
   },
+  {
+    num: "09",
+    category: "Scholar Unram",
+    title: "project 9",
+    description:
+      "Scholar Unram is a user-friendly academic platform designed to facilitate access to a vast collection of scholarly articles and journals. Tailored for students, researchers, and academics, this website, developed by the University of Mataram, offers a seamless experience for discovering high-quality research materials in English and other languages. With an intuitive interface, users can efficiently search for articles, journals, and publications across various disciplines, supporting academic exploration and knowledge advancement. Scholar Unram ensures reliable access to credible sources, making it an essential tool for research and scholarly pursuits.",
+    stack: [
+      { 
+        name: "PHP" 
+      },
+      { 
+        name: "Laravel" 
+      },
+      { 
+        name: "MySql" 
+      },
+      { 
+        name: "Cron Job" 
+      },
+      { 
+        name: "Pagination" 
+      },
+
+    ],
+    image: "/images/scholar.png",
+    live: "https://scholar.unram.ac.id",
+    github: "",
+  },
+  {
+    num: "10",
+    category: "Accelerometer",
+    title: "project 9",
+    description:
+      "The Earthquake Detection Accelerometer Monitoring Application is an innovative tool designed to detect and monitor seismic activity using advanced accelerometer technology. This application leverages real-time data from accelerometers to identify ground movements indicative of earthquakes, providing timely alerts and critical information to users. With a user-friendly interface, it enables researchers, disaster management teams, and communities to track seismic events, analyze vibration patterns, and enhance preparedness. The app ensures reliable, accurate detection, making it an essential solution for earthquake monitoring and safety.",
+    stack: [
+      { 
+        name: "Kotlin" 
+      },
+      { 
+        name: "Jetpack Compose" 
+      },
+      { 
+        name: "React" 
+      },
+      { 
+        name: "Javascript" 
+      },
+      { 
+        name: "MQTT" 
+      },
+
+    ],
+    image: "/images/accel.png",
+    live: "#",
+    github: "",
+  },
 ];
 
 const Work = () => {
-  const [project, setProject] = useState(projects[0]);
+  const [project, setProject] = useState(projects[projects.length - 1]);
   const handleSlideChange = (swiper) => {
     const currentIndex = swiper.activeIndex;
-    setProject(projects[currentIndex])
-  }
+    setProject(projects[projects.length - 1 - currentIndex]);
+  };
+
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
