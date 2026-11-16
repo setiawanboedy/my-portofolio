@@ -61,7 +61,7 @@ interface SkillsData {
 const about: AboutData = {
   title: "About me",
   description:
-    "Enthusiastic and driven software developer with 2-3 years of experience in Mobile and Backend Development. Proficient in Kotlin, Dart, Golang, and TypeScript, with a strong focus on delivering high-quality, secure, and user-centric applications. Seeking to leverage my skills and experience to excel in software development roles.",
+    "Enthusiastic and results-driven software engineer with 2+ years of professional experience in Mobile (Kotlin, Flutter) and Backend Development (Golang, Laravel). Proven track record mentoring developers, building production applications on Google Play, and architecting scalable backend APIs. Seeking to drive impact in dynamic software engineering teams.",
   info: [
     {
       fieldName: "Name",
@@ -92,8 +92,8 @@ const about: AboutData = {
       fieldValue: "Available",
     },
     {
-      fieldName: "Language",
-      fieldValue: "English, Indonesia",
+      fieldName: "Languages",
+      fieldValue: "English, Indonesian",
     },
   ],
 };
@@ -101,37 +101,61 @@ const about: AboutData = {
 const experience: ExperienceData = {
   title: "My Experience",
   description:
-    "I have extensive experience in mobile and web development and I am always enthusiastic about learning new technologies.",
+    "A journey of mentoring developers, building startup solutions, and delivering client applications across mobile and fullstack ecosystems.",
   items: [
     {
       company: "Itec",
       position: "Mobile Developer Trainer",
       duration: "Aug 2024 - Present",
+      highlights: [
+        "Delivered hands-on mobile engineering training in Kotlin and Flutter to 30+ students.",
+        "Designed project-based curriculum covering state management, REST API integration, and Clean Architecture.",
+      ],
     },
     {
       company: "Masjid Jalan Cahaya",
       position: "Freelance Fullstack Web Developer",
       duration: "Nov 2023 - Aug 2024",
+      highlights: [
+        "Architected and deployed a community media portal using Laravel, MySQL, and Tailwind CSS.",
+        "Integrated YouTube Data API with automated caching to optimize video stream delivery.",
+      ],
     },
     {
       company: "PT. Nawab Indonesia",
       position: "Freelance Fullstack Developer",
       duration: "Jan 2024 - Mei 2024",
+      highlights: [
+        "Built responsive client interfaces and robust backend REST API endpoints.",
+        "Collaborated with cross-functional teams to deliver database schemas and business logic.",
+      ],
     },
     {
       company: "Bangkit Academy 2023 Batch 2",
       position: "Mentor Android Developer",
       duration: "Aug 2023 - Feb 2024",
+      highlights: [
+        "Mentored 25+ cohort students in Google-certified Android curriculum.",
+        "Conducted code reviews and consultations on Jetpack Compose, Coroutines, and MVVM.",
+      ],
     },
     {
       company: "Bangkit Academy 2023 Batch 1",
       position: "Advisor of Capstone Android Developer",
       duration: "May 2023 - July 2023",
+      highlights: [
+        "Advised capstone teams on scalable architecture and cloud ML model integration.",
+        "Evaluated code quality, security considerations, and deployment readiness.",
+      ],
     },
     {
       company: "Kaki Keenam Startup Capstone",
-      position: "Android Developer",
+      position: "Mobile Developer",
       duration: "Jan 2022 - Feb 2023",
+      highlights: [
+        "Developed cross-platform mobile marketplace app connecting nearby vendors with consumers.",
+        "Integrated Google Maps SDK geolocation (20m radius) and Firebase Cloud Messaging.",
+      ],
     },
   ],
 };
@@ -139,17 +163,23 @@ const experience: ExperienceData = {
 const education: EducationData = {
   title: "My Education",
   description:
-    "Physics trains logical reasoning and analytical problem solving, directly applicable to software engineering.",
+    "Combining strong analytical foundations in Physics with specialized Google-accredited software engineering training.",
   items: [
     {
       institution: "Bangkit Academy 2021 x Google",
-      degree: "Mobile Developer",
+      degree: "Mobile Developer Cohort",
       duration: "Jan 2021 - Aug 2021",
+      highlights: [
+        "Completed 900+ hours of rigorous mobile engineering training led by Google, GoTo, and Traveloka.",
+      ],
     },
     {
       institution: "Mataram University",
-      degree: "Bachelor of Physics",
-      duration: "Aug 2023",
+      degree: "Bachelor of Physics (B.Sc.)",
+      duration: "Graduated Aug 2023",
+      highlights: [
+        "Applied physics logic and computational thinking to software development and IoT sensor analysis.",
+      ],
     },
   ],
 };
@@ -253,27 +283,45 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[650px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-[650px] pr-4">
+                  <div className="grid grid-cols-1 gap-[24px]">
                     {experience.items.map((item, index) => {
                       return (
-                        <li
+                        <div
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] p-6 rounded-xl flex flex-col gap-3 border border-white/5 hover:border-accent/40 transition-colors"
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.company}</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                            <h3 className="text-xl font-bold text-white">
+                              {item.position}
+                            </h3>
+                            <span className="text-accent text-sm font-semibold px-3 py-1 bg-accent/10 rounded-full w-fit">
+                              {item.duration}
+                            </span>
                           </div>
-                        </li>
+
+                          <div className="flex items-center gap-2 text-white/70 font-medium">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p>{item.company}</p>
+                          </div>
+
+                          {item.highlights && item.highlights.length > 0 && (
+                            <ul className="flex flex-col gap-1.5 pt-2 border-t border-white/10">
+                              {item.highlights.map((highlight, hIdx) => (
+                                <li
+                                  key={hIdx}
+                                  className="text-sm text-white/60 flex items-start gap-2 text-left"
+                                >
+                                  <span className="text-accent mt-1 text-xs">▹</span>
+                                  <span>{highlight}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
                       );
                     })}
-                  </ul>
+                  </div>
                 </ScrollArea>
               </div>
             </TabsContent>
@@ -285,27 +333,45 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-[500px] pr-4">
+                  <div className="grid grid-cols-1 gap-[24px]">
                     {education.items.map((item, index) => {
                       return (
-                        <li
+                        <div
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] p-6 rounded-xl flex flex-col gap-3 border border-white/5 hover:border-accent/40 transition-colors"
                         >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.degree}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                            <h3 className="text-xl font-bold text-white">
+                              {item.degree}
+                            </h3>
+                            <span className="text-accent text-sm font-semibold px-3 py-1 bg-accent/10 rounded-full w-fit">
+                              {item.duration}
+                            </span>
                           </div>
-                        </li>
+
+                          <div className="flex items-center gap-2 text-white/70 font-medium">
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p>{item.institution}</p>
+                          </div>
+
+                          {item.highlights && item.highlights.length > 0 && (
+                            <ul className="flex flex-col gap-1.5 pt-2 border-t border-white/10">
+                              {item.highlights.map((highlight, hIdx) => (
+                                <li
+                                  key={hIdx}
+                                  className="text-sm text-white/60 flex items-start gap-2 text-left"
+                                >
+                                  <span className="text-accent mt-1 text-xs">▹</span>
+                                  <span>{highlight}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
                       );
                     })}
-                  </ul>
+                  </div>
                 </ScrollArea>
               </div>
             </TabsContent>
@@ -325,7 +391,7 @@ const Resume = () => {
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group border border-white/5 hover:border-accent/40 transition-colors">
                               <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                 {item.icon}
                               </div>
@@ -349,7 +415,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 leading-relaxed">
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
@@ -360,7 +426,7 @@ const Resume = () => {
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
                         <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-lg font-medium">{item.fieldValue}</span>
                       </li>
                     );
                   })}

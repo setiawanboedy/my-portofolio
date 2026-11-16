@@ -28,18 +28,21 @@ export interface Project {
   image: string;
   live: string;
   github: string;
+  badge?: string;
 }
 
 export interface ExperienceItem {
   company: string;
   position: string;
   duration: string;
+  highlights?: string[];
 }
 
 export interface EducationItem {
   institution: string;
   degree: string;
   duration: string;
+  highlights?: string[];
 }
 
 export interface SkillItem {

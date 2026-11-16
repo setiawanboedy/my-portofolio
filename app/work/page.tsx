@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub, BsLockFill } from "react-icons/bs";
 import Link from "next/link";
 import {
   Tooltip,
@@ -21,182 +21,187 @@ import { Project } from "@/types";
 const projects: Project[] = [
   {
     num: "01",
-    category: "NoteKu",
+    category: "NoteKu (Journal Note)",
     title: "project 1",
     description:
-      "The Journal Note app and NoteKu, are modern Android applications designed for managing daily journal entries. It leverages a range of advanced Android technologies and frameworks to provide a seamless and efficient user experience. The app incorporates a declarative UI approach using Jetpack Compose, ensuring a clean and intuitive interface. As the Android Developer, I was responsible for the full development cycle of the Journal Note app, from planning and architecture to implementation and deployment.",
+      "Modern Android application engineered for daily journal entry management. Built with Jetpack Compose for declarative UI, Dagger Hilt for dependency injection, and offline-first Room database synchronized with Firebase and MongoDB. Published and actively used on the Google Play Store.",
     stack: [
       { name: "Kotlin" },
+      { name: "Jetpack Compose" },
       { name: "Dagger Hilt" },
-      { name: "Room" },
+      { name: "Room DB" },
       { name: "MongoDB" },
       { name: "Firebase" },
-      { name: "Jetpack Compose" },
-      { name: "MVVM Architecture" },
-      { name: "Material 3" },
+      { name: "MVVM" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/noteku.png",
+    image: "/images/noteku.png",
     live: "https://play.google.com/store/apps/details?id=com.tafakkur.noteapp",
     github: "https://github.com/setiawanboedy/journal-note",
+    badge: "Google Play Store",
   },
   {
     num: "02",
     category: "Masjid Digital",
     title: "project 2",
     description:
-      "The digital mosque website is an online platform that provides easy access for Muslims to obtain various types of Islamic content digitally. This platform allows users to watch videos of lectures, sermons, or religious lessons interactively and flexibly, anytime and anywhere.",
+      "A fullstack web platform connecting communities to digital Islamic resources, sermons, and educational video streaming. Integrated YouTube Data API with automated video syncing and caching to optimize loading speed.",
     stack: [
       { name: "PHP" },
       { name: "Laravel" },
-      { name: "Tailwind" },
-      { name: "Youtube API" },
+      { name: "Tailwind CSS" },
+      { name: "YouTube API" },
+      { name: "MySQL" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/masjiddigital.png",
+    image: "/images/masjiddigital.png",
     live: "",
     github: "",
+    badge: "Client Project",
   },
   {
     num: "03",
     category: "Kaki Keenam",
     title: "project 3",
     description:
-      "The Kaki Keenam app offers several features, including a user-friendly interface with smooth navigation and easy access to key product information. The app also displays the locations of vendors within a 20-meter radius of the user's location, facilitating interactions between users and nearby mobile vendors. Additionally, the app includes transaction capabilities, allowing users to make purchases and track their transaction history. The search feature enables users to easily find desired products.",
+      "Location-based mobile marketplace enabling real-time discovery of mobile street vendors within a 20-meter radius using Google Maps SDK and Firebase Cloud Messaging (FCM). Architected with Flutter and GetX state management.",
     stack: [
       { name: "Flutter" },
       { name: "Dart" },
+      { name: "Google Maps SDK" },
       { name: "FCM" },
-      { name: "GMap SDK" },
       { name: "Firebase" },
-      { name: "Getx" },
-      { name: "MVVM Architecture" },
-      { name: "Material 3" },
+      { name: "GetX" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/kakikeenam1.png",
+    image: "/images/kakikeenam1.png",
     live: "",
     github: "https://github.com/Kaki-Keenam/aplikasi-pembeli",
+    badge: "Startup Capstone",
   },
   {
     num: "04",
     category: "Squid Hunter",
     title: "project 4",
     description:
-      "The IT community is a platform that provides support, learning, and opportunities in the information technology industry. Joining an IT community can be a good step to continuously develop a career in the IT field. Typically, within the community, we will be challenged to create an out-of-the-box product to sharpen our programming skills. In West Nusa Tenggara, specifically on the island of Lombok, there are many tourist destinations that contribute significantly to the region's income. Considering this, to participate in a challenge organized by my community, I have an idea to create an application that can enhance tourism interest in Lombok Island. The name of the application is Squid Hunter.",
+      "Community tourism exploration app for West Nusa Tenggara (Lombok). Features geolocation mapping, interactive points of interest, push notifications, and offline caching to boost local tourism and community engagement.",
     stack: [
       { name: "Flutter" },
       { name: "Dart" },
+      { name: "Google Maps SDK" },
       { name: "FCM" },
-      { name: "Gmap SDK" },
       { name: "Firebase" },
-      { name: "Getx" },
-      { name: "MVVM Architecture" },
-      { name: "Material 3" },
+      { name: "GetX" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/squidhunter.png",
+    image: "/images/squidhunter.png",
     live: "",
     github: "",
+    badge: "Community Challenge",
   },
   {
     num: "05",
     category: "Hadir App",
     title: "project 5",
     description:
-      "Hadir app is a mobile attendance solution designed to simplify employee attendance management in a company. This app offers interactive and user friendly features for recording attendance, applying for leave, and viewing attendance summaries.",
+      "Enterprise mobile attendance and HR management system. Allows employees to log geofenced check-ins, submit leave requests, and view monthly attendance summaries with real-time biometric and location validation.",
     stack: [
       { name: "Flutter" },
       { name: "Dart" },
-      { name: "FCM" },
-      { name: "Gmap SDK" },
       { name: "Riverpod" },
-      { name: "Rest Api" },
-      { name: "Material 3" },
+      { name: "REST API" },
+      { name: "Google Maps SDK" },
+      { name: "FCM" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/hadir1.png",
+    image: "/images/hadir1.png",
     live: "",
     github: "",
+    badge: "Enterprise App",
   },
   {
     num: "06",
     category: "Heart Uno",
     title: "project 6",
     description:
-      "Heart Rate Analysis is an application designed to examine the heart signal's condition and analyze it to provide desired heart-related information.",
+      "IoT bio-signal hardware-software bridge connecting Arduino pulse sensors with a Flutter mobile app via serial port connector. Visualizes real-time electrocardiogram / PPG waveforms and calculates heart rate metrics.",
     stack: [
       { name: "Flutter" },
       { name: "Dart" },
-      { name: "Port Connector" },
+      { name: "Arduino" },
+      { name: "Serial Port" },
       { name: "Material 3" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/heart.png",
+    image: "/images/heart.png",
     live: "",
     github: "https://github.com/setiawanboedy/heart-uno",
+    badge: "Hardware & IoT",
   },
   {
     num: "07",
-    category: "Money Management",
+    category: "Momen (Money Management)",
     title: "project 7",
     description:
-      "Momen is an application for managing day-to-day finances.",
+      "Personal finance tracking mobile application featuring multi-wallet management, categorized income/expense records, and financial summary charts with clean Material 3 UI design.",
     stack: [
       { name: "Flutter" },
       { name: "Dart" },
-      { name: "Rest Api" },
+      { name: "REST API" },
       { name: "Material 3" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/momen.png",
+    image: "/images/momen.png",
     live: "",
     github: "https://github.com/setiawanboedy/momen-frontend",
+    badge: "Personal Project",
   },
   {
     num: "08",
-    category: "Fishku",
+    category: "Fishku Consumer",
     title: "project 8",
     description:
-      "Fishku is an application developed as a freelance project. This application has a main feature, which is the option to buy and sell fish, and the ability to scan fish to determine their freshness.",
+      "Fishery e-commerce and freshness scanning mobile application built for a commercial startup. Features seafood marketplace, payment gateway integration, and real-time order tracking notifications.",
     stack: [
       { name: "Flutter" },
       { name: "Dart" },
-      { name: "Rest Api" },
       { name: "FCM" },
+      { name: "REST API" },
       { name: "Firebase" },
-      { name: "Material 3" },
     ],
-    image: "https://setiawanboedy.github.io/public/images/fishku.PNG",
+    image: "/images/fishku.PNG",
     live: "https://play.google.com/store/apps/details?id=id.fishku.consumer",
     github: "",
+    badge: "Google Play Store",
   },
   {
     num: "09",
     category: "Scholar Unram",
     title: "project 9",
     description:
-      "Scholar Unram is a user-friendly academic platform designed to facilitate access to a vast collection of scholarly articles and journals. Tailored for students, researchers, and academics, this website, developed by the University of Mataram, offers a seamless experience for discovering high-quality research materials in English and other languages. With an intuitive interface, users can efficiently search for articles, journals, and publications across various disciplines, supporting academic exploration and knowledge advancement. Scholar Unram ensures reliable access to credible sources, making it an essential tool for research and scholarly pursuits.",
+      "Academic research repository portal for the University of Mataram. Facilitates high-throughput scholarly search across thousands of international publications, featuring automated cron indexing and optimized pagination.",
     stack: [
       { name: "PHP" },
       { name: "Laravel" },
-      { name: "MySql" },
-      { name: "Cron Job" },
-      { name: "Pagination" },
+      { name: "MySQL" },
+      { name: "Cron Jobs" },
+      { name: "Tailwind CSS" },
     ],
     image: "/images/scholar.png",
     live: "https://scholar.unram.ac.id",
     github: "",
+    badge: "Production University Platform",
   },
   {
     num: "10",
-    category: "Accelerometer",
+    category: "Earthquake Accelerometer",
     title: "project 10",
     description:
-      "The Earthquake Detection Accelerometer Monitoring Application is an innovative tool designed to detect and monitor seismic activity using advanced accelerometer technology. This application leverages real-time data from accelerometers to identify ground movements indicative of earthquakes, providing timely alerts and critical information to users. With a user-friendly interface, it enables researchers, disaster management teams, and communities to track seismic events, analyze vibration patterns, and enhance preparedness. The app ensures reliable, accurate detection, making it an essential solution for earthquake monitoring and safety.",
+      "Seismic vibration detection and earthquake early-warning system. Ingests high-frequency sensor telemetry via MQTT broker, analyzes ground motion thresholds, and presents real-time waveform monitoring across Android and React dashboards.",
     stack: [
       { name: "Kotlin" },
       { name: "Jetpack Compose" },
+      { name: "MQTT Broker" },
       { name: "React" },
-      { name: "Javascript" },
-      { name: "MQTT" },
+      { name: "TypeScript" },
     ],
     image: "/images/accel.png",
     live: "",
     github: "",
+    badge: "IoT & Seismic Research",
   },
 ];
 
@@ -219,30 +224,46 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                {project.num}
+          <div className="w-full xl:w-[50%] xl:h-[480px] flex flex-col xl:justify-between order-2 xl:order-none">
+            <div className="flex flex-col gap-[20px]">
+              {/* header & badge */}
+              <div className="flex items-center justify-between">
+                <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+                  {project.num}
+                </div>
+                {project.badge && (
+                  <span className="text-xs uppercase tracking-wider font-semibold px-3 py-1 rounded-full border border-accent text-accent bg-accent/10">
+                    {project.badge}
+                  </span>
+                )}
               </div>
+
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+              <h2 className="text-[36px] xl:text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.category}
               </h2>
+
               {/* project description */}
-              <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4 flex-wrap">
+              <p className="text-white/60 leading-relaxed">{project.description}</p>
+
+              {/* stack tags */}
+              <ul className="flex gap-2 flex-wrap pt-2">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li
+                      key={index}
+                      className="text-sm font-medium px-3 py-1 rounded-md bg-[#232329] text-accent border border-white/5"
+                    >
                       {item.name}
-                      {index !== project.stack.length - 1 && ","}
                     </li>
                   );
                 })}
               </ul>
+
               {/* Border */}
-              <div className="border border-white/20"></div>
+              <div className="border border-white/10 my-2"></div>
+
+              {/* action buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
                 {project.live ? (
@@ -253,16 +274,27 @@ const Work = () => {
                   >
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group hover:bg-accent transition-all">
+                          <BsArrowUpRight className="text-white text-2xl group-hover:text-primary transition-colors" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Live Project</p>
+                          <p>Live / Play Store</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
-                ) : null}
+                ) : (
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 opacity-50 cursor-not-allowed flex justify-center items-center">
+                        <BsLockFill className="text-white/60 text-xl" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Internal / Private Deployment</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                )}
 
                 {/* github project button */}
                 {project.github ? (
@@ -273,16 +305,27 @@ const Work = () => {
                   >
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
-                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 flex justify-center items-center group hover:bg-accent transition-all">
+                          <BsGithub className="text-white text-2xl group-hover:text-primary transition-colors" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Github Repository</p>
+                          <p>GitHub Repository</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
-                ) : null}
+                ) : (
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[60px] h-[60px] rounded-full bg-white/5 opacity-50 cursor-not-allowed flex justify-center items-center">
+                        <BsLockFill className="text-white/60 text-xl" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Private / Proprietary Codebase</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                )}
               </div>
             </div>
           </div>
@@ -296,15 +339,15 @@ const Work = () => {
               {projects.map((item, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-black/40 rounded-xl overflow-hidden border border-white/10">
                       {/* overlay */}
-                      <div className="absolute top-0 w-full h-full bg-black/10 z-10"></div>
+                      <div className="absolute top-0 w-full h-full bg-black/20 z-10"></div>
                       <div className="relative w-full h-full">
                         <Image
                           src={item.image}
                           fill
-                          className="object-cover"
-                          alt={item.title}
+                          className="object-contain p-4"
+                          alt={item.category}
                         />
                       </div>
                     </div>
@@ -314,7 +357,7 @@ const Work = () => {
               {/* Slide button */}
               <WorkSlideBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-md shadow-lg"
               />
             </Swiper>
           </div>

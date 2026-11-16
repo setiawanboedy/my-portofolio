@@ -11,14 +11,18 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div>
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl text-accent font-medium tracking-wide">
+              Mobile & Backend Developer
+            </span>
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />
               <span className="text-accent">Budi Setiawan</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
+            <p className="max-w-[500px] mb-9 text-white/80 leading-relaxed">
+              Software Developer specializing in Mobile (Kotlin, Flutter) and
+              Backend Architecture (Golang, Laravel). Passionate about building
+              high-performance mobile applications, seamless user experiences, and
+              scalable distributed systems.
             </p>
 
             {/* btn social */}
