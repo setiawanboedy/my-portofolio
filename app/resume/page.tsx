@@ -10,81 +10,117 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
-
-import { SiFlutter, SiGoland, SiKotlin, SiLaravel, SiNextdotjs, SiTailwindcss, SiTailwindCss } from "react-icons/si";
+import {
+  SiFlutter,
+  SiGoland,
+  SiKotlin,
+  SiLaravel,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  AboutInfoItem,
+  EducationItem,
+  ExperienceItem,
+  SkillItem,
+} from "@/types";
 
-const about = {
+interface AboutData {
+  title: string;
+  description: string;
+  info: AboutInfoItem[];
+}
+
+interface ExperienceData {
+  title: string;
+  description: string;
+  items: ExperienceItem[];
+}
+
+interface EducationData {
+  title: string;
+  description: string;
+  items: EducationItem[];
+}
+
+interface SkillsData {
+  title: string;
+  description: string;
+  items: SkillItem[];
+}
+
+const about: AboutData = {
   title: "About me",
   description:
     "Enthusiastic and driven software developer with 2-3 years of experience in Mobile and Backend Development. Proficient in Kotlin, Dart, Golang, and TypeScript, with a strong focus on delivering high-quality, secure, and user-centric applications. Seeking to leverage my skills and experience to excel in software development roles.",
   info: [
     {
-      filedName: "Name",
-      filedValue: "Budi Setiawan",
+      fieldName: "Name",
+      fieldValue: "Budi Setiawan",
     },
     {
-      filedName: "Phone",
-      filedValue: "(+62) 81 946 358 409",
+      fieldName: "Phone",
+      fieldValue: "(+62) 81 946 358 409",
     },
     {
-      filedName: "Experiece",
-      filedValue: "2+ Years",
+      fieldName: "Experience",
+      fieldValue: "2+ Years",
     },
     {
-      filedName: "LinkedIn",
-      filedValue: "setiawanboedy",
+      fieldName: "LinkedIn",
+      fieldValue: "setiawanboedy",
     },
     {
-      filedName: "Nationality",
-      filedValue: "Indonesia",
+      fieldName: "Nationality",
+      fieldValue: "Indonesia",
     },
     {
-      filedName: "Email",
-      filedValue: "budisetiawan.dev@gmail.com",
+      fieldName: "Email",
+      fieldValue: "budisetiawan.dev@gmail.com",
     },
     {
-      filedName: "Freelance",
-      filedValue: "Available",
+      fieldName: "Freelance",
+      fieldValue: "Available",
     },
     {
-      filedName: "Language",
-      filedValue: "English, Indonesia",
+      fieldName: "Language",
+      fieldValue: "English, Indonesia",
     },
   ],
 };
 
-const experience = {
+const experience: ExperienceData = {
   title: "My Experience",
   description:
-    "I heve many experience mobile and web development and willing to learn new thing.",
+    "I have extensive experience in mobile and web development and I am always enthusiastic about learning new technologies.",
   items: [
     {
       company: "Itec",
       position: "Mobile Developer Trainer",
       duration: "Aug 2024 - Present",
     },
-    // {
-    //   company: "Cv. Lumbung Inovasi",
-    //   position: "Freelance Mobile Developer",
-    //   duration: "Feb 2024 - Present",
-    // },
     {
       company: "Masjid Jalan Cahaya",
-      position: "Freelance Fullstack Web Devloper",
+      position: "Freelance Fullstack Web Developer",
       duration: "Nov 2023 - Aug 2024",
     },
     {
       company: "PT. Nawab Indonesia",
-      position: "Freelance Fullstack Devloper",
+      position: "Freelance Fullstack Developer",
       duration: "Jan 2024 - Mei 2024",
     },
     {
       company: "Bangkit Academy 2023 Batch 2",
-      position: "Mentor Android Devloper",
+      position: "Mentor Android Developer",
       duration: "Aug 2023 - Feb 2024",
     },
     {
@@ -94,16 +130,16 @@ const experience = {
     },
     {
       company: "Kaki Keenam Startup Capstone",
-      position: "Android Developer Devloper",
+      position: "Android Developer",
       duration: "Jan 2022 - Feb 2023",
     },
   ],
 };
 
-const education = {
+const education: EducationData = {
   title: "My Education",
   description:
-    "Physics can train my logic and implemented in programming.",
+    "Physics trains logical reasoning and analytical problem solving, directly applicable to software engineering.",
   items: [
     {
       institution: "Bangkit Academy 2021 x Google",
@@ -118,10 +154,10 @@ const education = {
   ],
 };
 
-const skills = {
+const skills: SkillsData = {
   title: "My Skills",
   description:
-    "Skill that i can handle.",
+    "Core programming languages, frameworks, and developer tools in my tech stack.",
   items: [
     {
       icon: <SiKotlin />,
@@ -241,7 +277,8 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            {/* Educatoin */}
+
+            {/* Education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
@@ -273,50 +310,62 @@ const Resume = () => {
               </div>
             </TabsContent>
 
+            {/* Skills */}
             <TabsContent value="skills" className="w-full h-full">
-                <div className="flex flex-col gap-[30px]">  
-                    <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                      <h3 className="text-4xl font-bold">{skills.title}</h3>
-                      <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
-                    </div>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                      {skills.items.map((item, index)=>{
-                        return (
-                          <li key={index}>
-                            <TooltipProvider delayDuration={100}>
-                              <Tooltip>
-                                <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                  <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                    {item.icon}
-                                  </div>
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                  <p className="capitalize">{item.name}</p>
-                                </TooltipContent>
-                              </Tooltip>
-                            </TooltipProvider>
-                          </li>
-                        );
-
-                      })}
-                    </ul>
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description}
+                  </p>
                 </div>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  {skills.items.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {item.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{item.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
-            <TabsContent value="about" className="w-full text-center xl:text-left">
-                <div className="flex flex-col gap-[30px]">  
-                    <h3 className="text-4xl font-bold">{about.title}</h3>
-                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-                    <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                      {about.info.map((item, index)=>{
-                        return (
-                          <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                            <span className="text-white/60">{item.filedName}</span>
-                            <span className="text-xl">{item.filedValue}</span>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                </div>
+
+            {/* About me */}
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-xl">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
