@@ -61,7 +61,7 @@ interface SkillsData {
 const about: AboutData = {
   title: "About me",
   description:
-    "Enthusiastic and results-driven software engineer with 2+ years of professional experience in Mobile (Kotlin, Flutter) and Backend Development (Golang, Laravel). Proven track record mentoring developers, building production applications on Google Play, and architecting scalable backend APIs. Seeking to drive impact in dynamic software engineering teams.",
+    "Enthusiastic and results-driven Software Engineer with 3+ years of professional experience in Mobile (Kotlin, Flutter) and Backend Development (Golang, Laravel). Proven track record mentoring developers, building production applications on Google Play, and architecting scalable backend APIs. Seeking to drive impact in dynamic software engineering teams.",
   info: [
     {
       fieldName: "Name",
@@ -73,7 +73,7 @@ const about: AboutData = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "2+ Years",
+      fieldValue: "3+ Years",
     },
     {
       fieldName: "LinkedIn",

@@ -19,9 +19,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://setiawanboedy.github.io"),
-  title: "Budi Setiawan | Software Developer (Mobile & Backend)",
+  title: "Budi Setiawan | Software Engineer",
   description:
-    "Portfolio of Budi Setiawan - Software Developer with 2+ years of experience specializing in Mobile (Kotlin, Flutter) and Backend Development (Golang, Laravel).",
+    "Portfolio of Budi Setiawan - Software Engineer with 3+ years of experience specializing in Mobile (Kotlin, Flutter) and Backend Development (Golang, Laravel).",
   keywords: [
     "Budi Setiawan",
     "Software Developer",

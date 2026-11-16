@@ -12,17 +12,17 @@ export default function Home() {
           {/* text */}
           <div>
             <span className="text-xl text-accent font-medium tracking-wide">
-              Mobile & Backend Developer
+              Software Engineer
             </span>
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />
               <span className="text-accent">Budi Setiawan</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80 leading-relaxed">
-              Software Developer specializing in Mobile (Kotlin, Flutter) and
-              Backend Architecture (Golang, Laravel). Passionate about building
-              high-performance mobile applications, seamless user experiences, and
-              scalable distributed systems.
+              Software Engineer with 3+ years of experience specializing in
+              Mobile (Kotlin, Flutter) and Backend Architecture (Golang, Laravel).
+              Passionate about building high-performance applications, seamless user
+              experiences, and scalable distributed systems.
             </p>
 
             {/* btn social */}

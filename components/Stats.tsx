@@ -5,15 +5,15 @@ import { StatItem } from "@/types";
 
 const stats: StatItem[] = [
   {
-    num: 2,
+    num: 3,
     text: "Years of experience",
   },
   {
-    num: 8,
+    num: 10,
     text: "Projects completed",
   },
   {
-    num: 5,
+    num: 8,
     text: "Technologies mastered",
   },
   {
@@ -37,6 +37,7 @@ const Stats = () => {
                   end={item.num}
                   duration={5}
                   delay={2}
+                  suffix="+"
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
                 <p
